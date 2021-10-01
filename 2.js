@@ -1,9 +1,17 @@
-function BLABLA() {
-    document.getElementById("hello").innerHTML = "Hello World";
-    document.getElementById("anotherHello").addEventListener("click",Boop);
-}
+window.addEventListener("load",start);
 
-function Boop(){
-    alert("You Clicked");
-}
+let change = false; //meaning 0 aswell
 
+function start(){
+    document.getElementById("btnFlag").addEventListener("click", function(){
+
+        if(change){
+            change = false;
+            document.getElementById("btnFlag").innerHTML = "Disabled";
+        }  else {
+            change = true;
+            document.getElementById("btnFlag").innerHTML = "Enabled";
+        }
+    }
+    );
+}
